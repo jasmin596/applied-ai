@@ -1,7 +1,9 @@
 pandas:
 --------
 ---------
-pandas is a python module that makes data science easy and effective
+
+
+pandas is a python module that makes data science easy and effective .
 syntax:import pandas as pd pandas:
 Object creation
 ---------------
@@ -58,7 +60,7 @@ Out[10]:
 1  1.0 2013-01-02  1.0  3  train  foo
 2  1.0 2013-01-02  1.0  3   test  foo
 3  1.0 2013-01-02  1.0  3  train  foo
-The columns of the resulting DataFrame have different dtypes.
+The columns of the resulting DataFrame have different dtypes...
 
 In [11]: df2.dtypes
 Out[11]: 

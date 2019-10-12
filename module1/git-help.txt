@@ -1,0 +1,21 @@
+git clone <git_url>
+
+git clone -b 'branch_name' <git_url>
+
+changes file 
+
+git status
+
+git add * 
+
+git status 
+
+git diff
+git diff file name
+
+add file1 file2 
+
+
+git commit -m "commit message"
+
+git push 
