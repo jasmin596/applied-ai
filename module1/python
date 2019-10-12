@@ -1,0 +1,359 @@
+why python::
+-------------
+-------------
+*very simple language to learn
+*best packages for AI:MATPLOT LIB,NUMPY,SCIPY,SCIKIT-LEARN,TENSORFLOW-DEEP LEARNING.
+*EXTENSIVELY USED IN THE INDUSTRY.
+id===exact address location
+data types:
+-------------
+-------------
+1.list==>mutable 	syntax:list=[1,2,3] any operation can be performed 
+---------
+2.tuple==>immutable	syntax:tuple=(1,2,3) any modifications are not occured
+-------
+3.sets==>mutable		syntax:set={1,3,4} any operation can be done 	sets donot allow duplication of data.
+--------
+  + Frozenset:it is a immutable set .it is a constant. we can't use a set as a key in dictionary.But the frozenset is used as an key in dictionary.
+4.dictionary==>it is mutable syntax:dict={name:'jasmin','age':12}
+-------------
+  +.get():-dictionary name.get is a function in dictionary by a key value then it gives the value .else we give a worng key (not existed key)then it returns an "none
+		eg:dict{'name':'jasmin','age':19}
+			print(dict.get('name'))
+			o/p:jasmin
+		eg:dict{'name':'jasmin','age':19}
+			print(dict.get('color'))
+			o/p:none.
+  +.pop():-it will retun a value but remove it from dictionary
+  +.popitem():-remove one of the key pairs from dictionary.
+  +del:-delete the specific key
+  +squares.clear():-it will clear all the dictionary
+  methodes in dictionary:-
+  --------------------------
+  1).copy:-it is used to copy the hole dictionary
+  2).fromkeys:- value of a keys are same then we using this methode 
+      eg:sub={}.fromkeys(['maths','english','hindi'},0)
+       print(sub)
+		o/p:{'maths:0,'english':0,'hindi':0}
+5.strings==>group of characters.the string is a immutable that means we can't insert 1 element and does not delete the single element but we can delete the hole string.
+-----------
+	this can be a single quotes('')/(""0/(''' ''')
+Functions
+---------
+---------
+the functions are used repeatedly
+doc string:the message with in 3ble quotes that is called doc string.it is a good programming practice.by this we can understand easyly.
+synax to call the doc string: function name.__doc__  	=>it display thefuntion name
+returns staement is optional.if we not retun explecitly  then python retuns none.
+types of functions:
+------------------
+1.build in functions:-
+---------------------
+abs():to converts -ve values to +ve values .if it is a +ve value then it will retun same value.
+all(): if a data structure(list,tuple,set) has non zero value then it retuns TRUE else FALSE.if a list has 0 elements then it ill return true.
+dir():see the in module 1 in 4.2 at	5:00 time
+divmod():returns the quoficaant and remainder
+eg:print(divmod(9,2))
+o/p:(4,1)
+enumrate():
+filter():
+isinstance():
+map():
+reduce():rolling computations
+2.user defined functions:-
+-------------------------	the function name can be given by the user
+funtional arguments:
+-------------------
+--------------------
+1.defult arguments
+2.keyword arguments:**kwarg pass the variable lenght of a argument to the function
+3.arbitary arguments:
+module:
+-------
+-------
+current date and time we get by importing datetime module
+eg:
+import datetime
+print(datetime.datetime.now()
+debeggers:-
+----------
+----------
+import pdb watch 4.10 in module 1
+eg:
+program:
+import pdb
+def seq(n):
+    for i in range(n):
+        pdb.set_trace()
+        print(i)
+    return
+seq(5)
+
+o/p:
+(Pdb) list
+  1  	import pdb
+  2  	def seq(n):
+  3  	    for i in range(n):
+  4  	        pdb.set_trace()
+  5  ->	        print(i)
+  6  	    return
+  7  	seq(5)
+[EOF]
+(Pdb) p i
+0
+(Pdb) i
+0
+(Pdb) p l
+*** NameError: name 'l' is not defined
+(Pdb) p local
+*** NameError: name 'local' is not defined
+(Pdb) p locals()
+{'n': 5, 'i': 0}
+(Pdb) h
+
+Documented commands (type help <topic>):
+========================================
+EOF    c          d        h         list      q        rv       undisplay
+a      cl         debug    help      ll        quit     s        unt      
+alias  clear      disable  ignore    longlist  r        source   until    
+args   commands   display  interact  n         restart  step     up       
+b      condition  down     j         next      return   tbreak   w        
+break  cont       enable   jump      p         retval   u        whatis   
+bt     continue   exit     l         pp        run      unalias  where    
+
+Miscellaneous help topics:
+==========================
+exec  pdb
+
+debuggers has different commands like w(here),h(elp),d(own),q(uit).
+module 1 lo 5 ;
+NUMPY:
+-------
+------
+numpy contains objects like int,float
+and containers
+1.extension packages to python for multi dimensional arrys
+2.closer to hardware(efficiency)
+3.desiged for scientific computation(convenience)
+4.also known as array  oriented computing
+eg:
+import numpy as np
+a=np.array([0,1,2,3])
+print(a)	#[0 1 2 3]
+(or)
+print(np.arange(10))	#[0 1 2 3 4 5 6 7 8 9]
+memory efficient container that provides fast numerical operations.
+eg:
+\\python lists
+l=range(1000)
+%timeit[i**2 for i in l]
+o/p:307ms +=17.6ms per loop
+\\numpy array
+a=np.arange(1000)
+%timeit a**2
+o/p:1.35ms +=123ns per loop
+1.creating arrays:
+-----------------
+1d numpy array:
+eg:
+a=np.array([0,1,2,3])
+print(a)
+o/p:array([0,1,2,3,4])
+2-D and 3-D :
+2-d
+eg:
+b=np.array([[[0,1,2],[3,4,5]]) 
+print(b)
+o/p:array([[[0,1,2],[3,4,5]])
+3d:
+---
+c=np.array([[[0,1],[2,3,],[[4,5],[6,7]]])
+print(c)
+o/p:array([[[0,1],[2,3,],[[4,5],[6,7]]])
+*to find no.of dimensional we use ndim
+eg:
+c.ndim
+o/p:
+3
+*to find shape use shape
+eg:
+c.shape
+o/p:(2,2,2)
+functions for creating array:
+---------------------------
+b=np.arange(1,10,2)
+			| |  |
+			
+		start end stepsize
+print(b)
+o/p:array([1,3,5,7,9])
+linear space function:
+---------------------
+eg:
+a=np.linspace(0,1,6)
+print(a)
+o/p:array([0. , 0.2, 0.4, 0.6, 0.8, 1.0])
+common arrays:
+--------------
+a=np.ones((3,3))
+print(a)
+o/p:
+array([[ 1., 1., 1.],
+	   [ 1., 1., 1.],
+	   [ 1., 1., 1.]])
+identity matrix:to find the identity matrix (maths)
+in data science terminolgy we represent like "eye" function.
+eg:a=np.eye(3,3)
+print(a)
+o/p:
+array([[ 1., 0., 0.],
+	   [ 0., 1., 0.],
+	   [ 0., 0., 1.]])
+eg 2:b=np.eye(3,2)
+print(b)
+o/p:
+array([[ 1., 0.],
+	   [ 0., 1.],
+	   [ 0., 0.]]) 
+create array using diag function:
+------------------------------
+a=np.diag([1,2,3,4])
+print a
+o/p:
+array([[1, 0, 0, 0],
+	   [0, 2, 0, 0],
+	   [0, 0, 3, 0],
+	   [0, 0, 0, 4]])
+create an array using random:
+eg:
+a=np.random.randn(4)
+print(a)
+o/p:
+array([1.99407539e+00, -1.33836224e+00,	   3.07395038e-04,
+		4.73482900e-01])
+explicitly specify data type:
+a=np.arange(10,dtype='float64')
+print(a)
+o/p:
+array([ 0., 1., 2., 3., 4., 5., 6., 7., 8., 9.])
+to know the type of a variable ,by using dtype
+syntax:variable_name.dtype
+eg:
+a=np.arange(10)
+a.dtype
+o/p:dtype('int64')
+other data types:
+complex:
+d=np.array([1+2j,2+4j])
+print(d.dtype)
+o/p:
+complex128
+boolean:
+b=np.array([true,false,true,false])
+print(b.dtype)
+o/p:
+boolean
+string:
+s=np.array(['ram','jasmin','anu'])
+s.dtype
+o/p:dtype('s6')
+slicing:
+---------
+a=np.arange(10)
+a[5:]=10
+print a
+o/p:
+array([0,1,2,3,4,4,3,2,1,0])
+arithmetic operates:
+---------------------
+a=np.arry([1,2,3,4])
+b=np.ones(4)+1
+print(a+1)	#array([1,4,9,16]) 
+print(a-b)
+print(a*b)
+print(a**2)		#array([1,4,9,16])
+matrix multiplication:
+---------------------
+c=np.diag([1,2,3,4])
+print(c*c)
+print("*******************")
+print(c.dot(c))
+comparisions:
+-------------
+a=np.array([1,2,3])
+b=np.array([5,2,4])
+a==b
+array([false,true,false],dtype=bool])
+logical operaters:
+-------------------
+syntaxes:
+np.logical_or(a,b)
+np.logical_and(a,b)
+transcendental function:this is for matha matical operations
+-----------------------
+a=np.arange(5)
+np.sin(a)
+np.log(a)
+np.exp(a)
+shape mismatch:
+-----------
+a=np.arange(4)
+a+np.array([1,2])
+they are not in same size so that we cant add two arrays.
+basic reduction:
+----------------
+-----------------
+computing sums:
+---------------
+x=np.array([[1,1],[2,2]])
+print(x)
+x.sum(axis=0)
+o/p:
+array([3,3])
+x.sum(axis=1)
+array([2,4])
+min:
+x=np.array9[1,2,3])
+x.min() o/p: 1
+x.max() o/p:3
+x.argmin()#index of minimum element 	o/p:0
+x.argmax() o/p:2
+np.all([true,true,false])#all is like logical and
+o/p:false 		#any of is false then it return false.
+np.any([true,false,false])#it is like or
+o/p:true
+statistics:
+---------
+x=np.array([1,2,3,1]
+y=np.array([[1,2,3],[5,6,7]])
+x.mean()
+o/p:
+1.75
+np.median(x)
+o/p:
+1.5
+np.std(x)#standart deviation
+np.median(y,axis=-1)#last axis o/p:array([2. , 5.])
+data=np.loadtxt('populations.txt')
+print(data)
+broadcasting:
+-------------
+matplotlib:
+------------
+------------
+matplotlib pyplot is a collection of command style functions that make matplotlib work like matable
+syntax:
+import matplotlib.pyplot as plt
+plt.plot([2,4,6,4])
+plt.ylabel("numbers")
+plt.xlabel('indices')
+plt.title('myplot')
+plt.show() 
+pandas:
+--------
+---------
+pandas is a python module that makes data science easy and effective
+syntax:import pandas as pd 
+
+   
+
